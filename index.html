@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A/B Testing Report</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>A/B Testing Hand-In</h1>
+    </header>
+    
+    <main>
+        <section>
+            <h2>Project Overview</h2>
+            <p>
+                A/B Testing is a method used to compare two versions of a web page or app to determine which one performs better. The overarching question we are attempting to prove/disprove is whether version A or version B of the webpage yields better results in terms of user engagement or conversion rates. A/B Testing helps make useful observations on the effectiveness of one design over another by randomly assigning users to either version A or version B and analyzing their interactions and behaviors.
+            </p>
+        </section>
+
+        <section>
+            <h2>Webpage Modifications</h2>
+            <div class="three-columns">
+                <div class="column">
+                    <img src="version-a.png" alt="Version A of webpage">
+                    <p class="caption">Version A</p>
+                </div>
+                <div class="column middle">
+                    <h3>Changes</h3>
+                    <p>
+                        <strong>1. Appointment Button Colors</strong>
+                        <br>Both Gray -> Gray & Black 
+                        <br><strong>2. Appointment Textual Hierarchy</strong>
+                        <br>Adjusted Font Size & Text Color
+                        <br><strong>3. Organization of Appointments</strong>
+                        <br>Unordered -> Ordered chronologically by date
+                    </p>
+                </div>
+                <div class="column">
+                    <img src="version-b.png" alt="Version B of webpage">
+                    <p class="caption">Version B</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Chosen Metric</h2>
+            <p>
+                My metric of choice is <strong>mouse movement distance</strong> which is defined as the total distance (in pixels) of the user’s mouse movements.
+            </p>
+        </section>
+
+        <section>
+            <h2>Hypotheses and Predictions</h2>
+            <div class="metric-block">
+                <p class="metric-header">Metric 1</p>
+                <p class="metric-description"><strong>Misclick Rate:</strong> the frequency with which users click something else on the page before finding the correct button for the task</p>
+            </div>
+            <div class="stacked-tables">
+                <div class="table-container">
+                    <table>
+                        <tr>
+                            <th class="null">Null Hypothesis</th> 
+                            <td>There is no difference in the misclick rate between version A and version B of the webpage.</td>
+                        </tr>
+                        <tr>
+                            <th>Prediction</th>
+                            <td>We predict that we will reject the null hypothesis, indicating a statistically significant difference in the misclick rate between version A and version B of the webpage. Our expectation is based on the alternative hypothesis that version B, with its improvements in UI for the target interaction, will result in a lower misclick rate compared to version A. We justify this prediction by considering the UI modifications implemented in version B, such as in button color and textual hierarchy, that differentiate and present the desired user interaction more clearly.</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="table-container">
+                    <table>
+                        <tr>
+                            <th class="alt">Alternative Hypothesis</th> 
+                            <td>
+                                There is a difference in the misclick rate between version A and version B of the webpage, 
+                                where version B will yield a lower misclick rate than version A.
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Reasoning</th>
+                            <td>
+                                The alternative hypothesis is based on the following UI changes between versions A and B of the webpage:
+                                <ul>
+                                    <li><strong>Button Differentiation:</strong>
+                                        <ul>
+                                            <li><strong>Version A:</strong> Both "See Appointment" and "Schedule Appointment" buttons are the same shade of gray, differing only by text.</li>
+                                            <li><strong>Version B:</strong> "See Appointment" is gray, and "Schedule Appointment" is black. This color contrast reduces misclicks on the "See Appointment" button and increases user interaction with the "Schedule Appointment" button due to higher visibility against the white background.</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Textual Hierarchy:</strong>
+                                        <ul>
+                                            <li><strong>Version A:</strong> All appointment details are the same gray color, with the appointment type bolded and slightly larger than the physician information.</li>
+                                            <li><strong>Version B:</strong> Physician information is larger and darker than the appointment type, making it easier to identify and differentiate appointments by physician name and location. This change increases readability and helps users more easily identify their desired physician and location, reducing misclicks.</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>     
+
+            <div class="metric-block">
+                <p class="metric-header">Metric 2</p>
+                <p class="metric-description"><strong>Time on Page:</strong> time spent on the webpage for each user group</p>
+            </div>
+            <div class="stacked-tables">
+                <div class="table-container">
+                    <table>
+                        <tr>
+                            <th class="null">Null Hypothesis</th> 
+                            <td>There is no difference in the time spent on page between version A and version B of the webpage.</td>
+                        </tr>
+                        <tr>
+                            <th>Prediction</th>
+                            <td>
+                                We predict that we will reject the null hypothesis, indicating a statistically significant difference in the time 
+                                spent on page between version A and version B of the webpage. Our expectation is based on the alternative hypothesis 
+                                that version B, with its improvements in UI for the target interaction, will result in less amount of time spent 
+                                on page compared to version A. We justify this prediction by considering the UI modifications implemented in version B 
+                                where appointments are organized in a way that is more chronologically-sound (visually and logically) than version A. 
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="table-container">
+                    <table>
+                        <tr>
+                            <th class="alt">Alternative Hypothesis</th> 
+                            <td>
+                                There is a difference in the time spent on page between version A and version B of the webpage, 
+                                where version B will result in less amount of time spent on page than version A.
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Reasoning</th>
+                            <td>
+                                The alternative hypothesis is based on the following UI changes between versions A and B of the webpage:
+                                <ul>
+                                    <li><strong>Appointment Organization:</strong>
+                                        <ul>
+                                            <li><strong>Version A:</strong> Appointments are vertically ordered with no logical order nor grouping, making it harder for users to find desired appointments as they need to navigate up and down. This likely increases time spent on the page.</li>
+                                            <li><strong>Version B:</strong> Appointments are organized chronologically by date, offering a more streamlined vertical navigation and improving top-to-bottom searchability and reducing the time needed to locate and schedule appointments.</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>    
+
+            <div class="metric-block">
+                <p class="metric-header">Metric 3</p>
+                <p class="metric-description"><strong>Mouse Movement Distance:</strong> the total distance (in pixels) of the user’s mouse movements during their time on the webpage</p>
+            </div>
+            <div class="stacked-tables">
+                <div class="table-container">
+                    <table>
+                        <tr>
+                            <th class="null">Null Hypothesis</th> 
+                            <td>There is no difference in mouse movement distance between version A and version B of the webpage.</td>
+                        </tr>
+                        <tr>
+                            <th>Prediction</th>
+                            <td>
+                                We predict that we will reject the null hypothesis, indicating a statistically significant difference in the time 
+                                spent on page between version A and version B of the webpage. Our expectation is based on the alternative hypothesis 
+                                that version B, with its improvements in UI for the target interaction, will result in less amount of time spent 
+                                on page compared to version A. We justify this prediction by considering the UI modifications implemented in version B 
+                                where appointments are organized in a way that is more chronologically-sound (visually and logically) than version A. 
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="table-container">
+                    <table>
+                        <tr>
+                            <th class="alt">Alternative Hypothesis</th> 
+                            <td>
+                                There is a difference in the time spent on page between version A and version B of the webpage, 
+                                where version B will result in less amount of time spent on page than version A.
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Reasoning</th>
+                            <td>
+                                The alternative hypothesis is based on the following UI changes between versions A and B of the webpage:
+                                <ul>
+                                    <li><strong>Appointment Organization:</strong>
+                                        <ul>
+                                            <li><strong>Version A:</strong> Appointments are vertically ordered with no logical order nor grouping, making it harder for users to find desired appointments as they need to navigate up and down. This likely increases time spent on the page.</li>
+                                            <li><strong>Version B:</strong> Appointments are organized chronologically by date, offering a more streamlined vertical navigation and improving top-to-bottom searchability and reducing the time needed to locate and schedule appointments.</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div> 
+        </section>
+
+        <section>
+            <h2>Statistical Analysis</h2>
+            <div class="three-columns">
+                <div class="column">
+                    <p class="metric-header">Metric 1</p>
+                    <p class="metric-description"><strong>Misclick Rate</strong> (did_misclick)</p>
+                    <img src="did_misclick.png" alt="Statistical results of mislick rate for versions A and B of webpage">
+                    <p>
+                        Explanation or details regarding Metric 1 can be added here. This text should describe the relevance and interpretation of the metric shown in the image above.
+                    </p>
+                </div>
+                <div class="column">
+                    <p class="metric-header">Metric 2</p>
+                    <p class="metric-description"><strong>Time on Page</strong> (time_on_page)</p>
+                    <img src="time_on_page.png" alt="Statistical results of time spent on page for versions A and B of webpage">
+                    <p>
+                        Explanation or details regarding Metric 2 can be added here. This text should describe the relevance and interpretation of the metric shown in the image above.
+                    </p>
+                </div>
+                <div class="column">
+                    <p class="metric-header">Metric 3</p>
+                    <p class="metric-description"><strong>Mouse Movement Distance</strong> (mouse_move_distance)</p>
+                    <img src="mouse_move_distance.png" alt="Statistical results of mouse movement distance for versions A and B of webpage">
+                    <p>
+                        Explanation or details regarding Metric 3 can be added here. This text should describe the relevance and interpretation of the metric shown in the image above.
+                    </p>
+                </div>
+            </div>
+            <h3>Summary Statistics</h3>
+            <p>
+                Summary statistics such as the mean, standard deviation, and confidence intervals will provide insights into the distribution of conversion rates for both versions of the webpage.
+            </p>
+        </section>
+    </main>
+</body>
+</html>
