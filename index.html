@@ -150,7 +150,7 @@
                                 <ul>
                                     <li><strong>Appointment Organization:</strong>
                                         <ul>
-                                            <li><strong>Version A:</strong> Appointments are vertically ordered with no logical order nor grouping, making it harder for users to find desired appointments as they need to navigate up and down. This likely increases time spent on the page.</li>
+                                            <li><strong>Version A:</strong> Appointments are vertically ordered with no logical order nor grouping, making it harder for users to find desired appointments as they need to continously navigate up and down. This likely increases time spent on the page.</li>
                                             <li><strong>Version B:</strong> Appointments are organized chronologically by date, offering a more streamlined vertical navigation and improving top-to-bottom searchability and reducing the time needed to locate and schedule appointments.</li>
                                         </ul>
                                     </li>
@@ -175,11 +175,12 @@
                         <tr>
                             <th>Prediction</th>
                             <td>
-                                We predict that we will reject the null hypothesis, indicating a statistically significant difference in the time 
-                                spent on page between version A and version B of the webpage. Our expectation is based on the alternative hypothesis 
-                                that version B, with its improvements in UI for the target interaction, will result in less amount of time spent 
-                                on page compared to version A. We justify this prediction by considering the UI modifications implemented in version B 
-                                where appointments are organized in a way that is more chronologically-sound (visually and logically) than version A. 
+                                We predict that we will reject the null hypothesis, indicating a statistically significant difference in the 
+                                total distance of the user’s mouse movements between version A and version B of the webpage. Our expectation 
+                                is based on the alternative hypothesis that version B, with its improvements in UI for the target interaction, 
+                                will result in less mouse movement distance compared to version A. We justify this prediction by considering the 
+                                UI modifications implemented in version B where the intentional use and alignment of similar colors more clearly
+                                highlight horizontal relations and increase navigability compared to version A.
                             </td>
                         </tr>
                     </table>
@@ -189,19 +190,19 @@
                         <tr>
                             <th class="alt">Alternative Hypothesis</th> 
                             <td>
-                                There is a difference in the time spent on page between version A and version B of the webpage, 
-                                where version B will result in less amount of time spent on page than version A.
+                                There is a difference in mouse movement distance between version A and version B of the webpage, 
+                                where version B will result in less mouse movement distance than version A.
                             </td>
                         </tr>
                         <tr>
                             <th>Reasoning</th>
                             <td>
-                                The alternative hypothesis is based on the following UI changes between versions A and B of the webpage:
+                                The alternative hypothesis is based on the following UI change between versions A and B of the webpage, along with previously mentioned changes:
                                 <ul>
-                                    <li><strong>Appointment Organization:</strong>
+                                    <li><strong>Color Alignment:</strong>
                                         <ul>
-                                            <li><strong>Version A:</strong> Appointments are vertically ordered with no logical order nor grouping, making it harder for users to find desired appointments as they need to navigate up and down. This likely increases time spent on the page.</li>
-                                            <li><strong>Version B:</strong> Appointments are organized chronologically by date, offering a more streamlined vertical navigation and improving top-to-bottom searchability and reducing the time needed to locate and schedule appointments.</li>
+                                            <li><strong>Version A:</strong> All appointment buttons are the same blue color, where there is no clear division/separation between appointment options. This may cause navigational confusion where users need to manually check and align appointment options with their corresponding appointment buttons.</li>
+                                            <li><strong>Version B:</strong> "Schedule Appointment" buttons are differentiated and black, creating a visual connection and alignment with the black text of the physician details. Enforces clearer horizontal relationship and vertical separation between corresponding appointment option and buttons, which allows for more direct mouse movement.</li>
                                         </ul>
                                     </li>
                                 </ul>
